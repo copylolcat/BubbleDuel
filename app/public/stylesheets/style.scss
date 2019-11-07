@@ -1,0 +1,248 @@
+@import "compass/css3";
+@import "normalize";
+
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    background-image:url(../images/KakaisAlexsSon.jpg);
+    background-size:cover;
+    background-repeat:no-repeat;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+div {
+    position: relative;
+}
+
+@keyframes right-to-left {
+    0% {
+        left: calc(8%);
+        // transform: rotateZ(0deg);
+    }
+    50% {
+        left: calc(50% - 62px);
+        // transform: rotateZ(540deg) scale(2);
+    }
+    100% {
+        left: calc(92%);
+        // transform: rotateZ(1080deg);
+    }
+}
+
+@keyframes left-to-right {
+    0% {
+        right: calc(8%);
+        // transform: rotateZ(0deg);
+    }
+    50% {
+        right: calc(50% - 62px);
+        // transform: rotateZ(540deg) scale(2);
+    }
+    100% {
+        right: calc(92%);
+        // transform: rotateZ(1080deg);
+    }
+}
+
+.bubble-track {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 80px;
+    .bubble {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        background-image:url(../images/bubble.png);
+        background-color:white;
+        &.copper {
+            background-color: orange;
+        }
+        &.iron {
+            background-color: gray;
+        }
+        &.gold {
+            background-color: gold;
+        }
+        &.crystal {
+            background-color: violet;
+        }
+        &.diamond {
+            background-color: lightskyblue;
+        }
+        &.rtl {
+            animation-name: right-to-left;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+        }
+        &.ltr {
+            animation-name: left-to-right;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+        }
+    }
+        .bubble1 {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        background-image:url(../images/bubble.png);
+        background-color:white;
+        &.copper {
+            background-color: orange;
+        }
+        &.iron {
+            background-color: gray;
+        }
+        &.gold {
+            background-color: gold;
+        }
+        &.crystal {
+            background-color: violet;
+        }
+        &.diamond {
+            background-color: lightskyblue;
+        }
+        &.rtl {
+            animation-name: right-to-left;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+        }
+        &.ltr {
+            animation-name: left-to-right;
+            animation-duration: 2s;
+            animation-timing-function: ease-in;
+        }
+    }
+}
+
+.bigger{
+    position: absolute;
+    top: 50%;
+    width: 80px;
+    left: 20px;
+    background-image:url(../images/player-idle.jpg);
+    &.getsbigger{
+        animation-name: getbigger;
+        animation-duration: 5s;
+        animation-timing-function:linear;
+
+    }
+}
+.ocean {
+    margin:0px;
+    height: 80vh;
+    .player, .opponent {
+        transition: all 333ms ease-in-out;
+        position: absolute;
+        top: 50%;
+        width: 150px;
+        img {
+            width: 100%
+        }
+    }
+    .player {
+        left: 70px;
+        #selfshield {
+            position: absolute;
+            display: none;
+            opacity: 0.4;
+            height: 200px;
+            width: 200px;
+            top: calc(50% - 80px);
+        }
+    }
+    .opponent {
+        right: 70px;
+        #oppshield {
+            position: absolute;
+            opacity: 0.4;
+            display: none;
+            height: 200px;
+            width: 200px;
+            top: calc(50% - 80px);
+        }
+    }
+    h1 {
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0px);
+    }
+    h2{
+        position:absolute;
+        top: 20%;
+        left: 50%;
+        transform: translate3d(-50%,-50%, 0px);
+    }
+    h3{
+        position:absolute;
+        top: 25%;
+        left: 50%;
+        font-size: 300%;
+        transform:translate3d(-50%,-50%,0px);
+    }
+}
+
+.floor {
+    height: 15vh;
+    padding: 30px;
+    .charges {
+        display:inline-block;
+        float: left;
+        width: 15%;
+        }
+    
+    .attacks {
+        float: left;
+        width: 55%;
+        left: 23%;
+    }
+    .blocks {
+        float: right;
+        width: 25%;
+        text-align: right;
+    }
+    &:after {
+        content: ' ';
+        display: block;
+        clear: both;
+    }
+    button {
+        width: 70px;
+        height: 70px;
+        border: none;
+        background-image:url(../images/shell.png);
+        background-size: contain;
+        background-color: transparent;
+        outline: none;
+    }
+}
+
+.menu {
+    background-color: skyblue;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 400px;
+    height: 275px;
+    transform: translate3d(-200px, -100px, 0px);
+    padding: 20px;
+    text-align: center;
+    img{
+        width:100%;
+    }
+    .title {
+        font-size: 80px;
+    }
+    button {
+        padding: 10px;
+        font-size: 20px;
+    }
+}
