@@ -1,0 +1,190 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  background-image: url(../images/KakaisAlexsSon.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+div {
+  position: relative; }
+
+@keyframes right-to-left {
+  0% {
+    left: calc(8%); }
+  50% {
+    left: calc(50% - 62px); }
+  100% {
+    left: calc(92%); } }
+
+@keyframes left-to-right {
+  0% {
+    right: calc(8%); }
+  50% {
+    right: calc(50% - 62px); }
+  100% {
+    right: calc(92%); } }
+
+.bubble-track {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 80px; }
+  .bubble-track .bubble {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-image: url(../images/bubble.png);
+    background-color: white; }
+    .bubble-track .bubble.copper {
+      background-color: orange; }
+    .bubble-track .bubble.iron {
+      background-color: gray; }
+    .bubble-track .bubble.gold {
+      background-color: gold; }
+    .bubble-track .bubble.crystal {
+      background-color: violet; }
+    .bubble-track .bubble.diamond {
+      background-color: lightskyblue; }
+    .bubble-track .bubble.rtl {
+      animation-name: right-to-left;
+      animation-duration: 2s;
+      animation-timing-function: linear; }
+    .bubble-track .bubble.ltr {
+      animation-name: left-to-right;
+      animation-duration: 2s;
+      animation-timing-function: linear; }
+  .bubble-track .bubble1 {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    background-image: url(../images/bubble.png);
+    background-color: white; }
+    .bubble-track .bubble1.copper {
+      background-color: orange; }
+    .bubble-track .bubble1.iron {
+      background-color: gray; }
+    .bubble-track .bubble1.gold {
+      background-color: gold; }
+    .bubble-track .bubble1.crystal {
+      background-color: violet; }
+    .bubble-track .bubble1.diamond {
+      background-color: lightskyblue; }
+    .bubble-track .bubble1.rtl {
+      animation-name: right-to-left;
+      animation-duration: 2s;
+      animation-timing-function: ease-in; }
+    .bubble-track .bubble1.ltr {
+      animation-name: left-to-right;
+      animation-duration: 2s;
+      animation-timing-function: ease-in; }
+
+.bigger {
+  position: absolute;
+  top: 50%;
+  width: 80px;
+  left: 20px;
+  background-image: url(../images/player-idle.jpg); }
+  .bigger.getsbigger {
+    animation-name: getbigger;
+    animation-duration: 5s;
+    animation-timing-function: linear; }
+
+.ocean {
+  margin: 0px;
+  height: 80vh; }
+  .ocean .player, .ocean .opponent {
+    transition: all 333ms ease-in-out;
+    position: absolute;
+    top: 50%;
+    width: 150px; }
+    .ocean .player img, .ocean .opponent img {
+      width: 100%; }
+  .ocean .player {
+    left: 70px; }
+    .ocean .player #selfshield {
+      position: absolute;
+      display: none;
+      opacity: 0.4;
+      height: 200px;
+      width: 200px;
+      top: calc(50% - 80px); }
+  .ocean .opponent {
+    right: 70px; }
+    .ocean .opponent #oppshield {
+      position: absolute;
+      opacity: 0.4;
+      display: none;
+      height: 200px;
+      width: 200px;
+      top: calc(50% - 80px); }
+  .ocean h1 {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0px); }
+  .ocean h2 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0px); }
+  .ocean h3 {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    font-size: 300%;
+    transform: translate3d(-50%, -50%, 0px); }
+
+.floor {
+  height: 15vh;
+  padding: 30px; }
+  .floor .charges {
+    display: inline-block;
+    float: left;
+    width: 15%; }
+  .floor .attacks {
+    float: left;
+    width: 55%;
+    left: 23%; }
+  .floor .blocks {
+    float: right;
+    width: 25%;
+    text-align: right; }
+  .floor:after {
+    content: ' ';
+    display: block;
+    clear: both; }
+  .floor button {
+    width: 70px;
+    height: 70px;
+    border: none;
+    background-image: url(../images/shell.png);
+    background-size: contain;
+    background-color: transparent;
+    outline: none; }
+
+.menu {
+  background-color: skyblue;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 400px;
+  height: 275px;
+  transform: translate3d(-200px, -100px, 0px);
+  padding: 20px;
+  text-align: center; }
+  .menu img {
+    width: 100%; }
+  .menu .title {
+    font-size: 80px; }
+  .menu button {
+    padding: 10px;
+    font-size: 20px; }
+
+/*# sourceMappingURL=style.css.map */
